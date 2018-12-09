@@ -1,0 +1,80 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:SLToolkit.DataForm.WPF.Controls;assembly=SLToolkit.DataForm.WPF">
+
+
+    <Style x:Key="DataFieldLabelStyle" TargetType="controls:Label">
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:Label">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="Disabled"/>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ValidationStates">
+                                <VisualState x:Name="Valid"/>
+                                <VisualState x:Name="Invalid">
+                                    <!--<Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Duration="0:0:1.5" Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentControl">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush Color="Red"/>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>-->
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="RequiredStates">
+                                <VisualState x:Name="NotRequired"/>
+                                <VisualState x:Name="Required">
+                                    <!--<Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="FontWeight" Storyboard.TargetName="ContentControl">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="SemiBold"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>-->
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="2" Padding="{TemplateBinding Padding}">
+                            <ContentControl x:Name="ContentControl" Cursor="{TemplateBinding Cursor}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" IsTabStop="False"
+                                            Foreground="{TemplateBinding Foreground}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" 
+                                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" Margin="0 0 8 0"
+                                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TopAlignedDataFieldLabelStyle" TargetType="controls:Label" BasedOn="{StaticResource DataFieldLabelStyle}">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Margin" Value="0 2 0 0"/>
+    </Style>
+
+    <Style TargetType="controls:DataField">
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Margin" Value="3"/>
+        <Setter Property="Padding" Value="0 2.5"/>
+        <Setter Property="MinHeight" Value="33"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="LabelStyle" Value="{StaticResource DataFieldLabelStyle}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:DataField">
+                    <ContentControl x:Name="ContentControl" Margin="{TemplateBinding Padding}" Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" HorizontalContentAlignment="Stretch" IsTabStop="False" VerticalAlignment="Center"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

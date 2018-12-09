@@ -1,0 +1,13 @@
+mode: ContinuousDelivery
+next-version: 1.0.0
+branches:
+  develop:
+    tag: alpha
+  feature:
+    mode: ContinuousDeployment
+  release:
+    mode: ContinuousDeployment
+  hotfix:
+    mode: ContinuousDeployment
+ignore:
+  sha: []

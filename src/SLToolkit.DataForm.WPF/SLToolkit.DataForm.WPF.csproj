@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1F0F8DD-E13C-40B9-8CFC-75439A9BC240}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>SLToolkit.DataForm.WPF</RootNamespace>
+    <AssemblyName>SLToolkit.DataForm.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Automation\DescriptionViewerAutomationPeer.cs" />
+    <Compile Include="Automation\LabelAutomationPeer.cs" />
+    <Compile Include="Automation\ValidationSummaryAutomationPeer.cs" />
+    <Compile Include="Common\CommonResources.Designer.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\TypeHelper.cs" />
+    <Compile Include="Controls\Common\ExtensionProperties.cs" />
+    <Compile Include="Controls\Common\Extensions.cs" />
+    <Compile Include="Controls\DescriptionViewer.cs" />
+    <Compile Include="Controls\FocusingInvalidControlEventArgs.cs" />
+    <Compile Include="Controls\Label.cs" />
+    <Compile Include="Controls\ValidationHelper.cs" />
+    <Compile Include="Controls\ValidationItemCollection.cs" />
+    <Compile Include="Controls\ValidationMetadata.cs" />
+    <Compile Include="Controls\ValidationSummary.cs" />
+    <Compile Include="Controls\ValidationSummaryFilters.cs" />
+    <Compile Include="Controls\ValidationSummaryItem.cs" />
+    <Compile Include="Controls\ValidationSummaryItemSource.cs" />
+    <Compile Include="Controls\ValidationSummaryItemType.cs" />
+    <Compile Include="Controls\VisualStates.cs" />
+    <Compile Include="Controls\DataField.cs" />
+    <Compile Include="Controls\DataFieldDescriptionViewerPosition.cs" />
+    <Compile Include="Controls\DataFieldLabelPosition.cs" />
+    <Compile Include="Controls\DataFieldMode.cs" />
+    <Compile Include="Automation\DataFormAutomationPeer.cs" />
+    <Compile Include="Controls\DataForm.cs" />
+    <Compile Include="Controls\DataFormBindingInfo.cs" />
+    <Compile Include="Controls\DataFormCommandButtonsVisibilityTypeConverter.cs" />
+    <Compile Include="Controls\DataFormCommandButtonsVisibility.cs" />
+    <Compile Include="Controls\DataFormEditAction.cs" />
+    <Compile Include="Controls\DataFormMode.cs" />
+    <Compile Include="Controls\DataFormAddingNewItemEventArgs.cs" />
+    <Compile Include="Controls\DataFormAutoGeneratingFieldEventArgs.cs" />
+    <Compile Include="Controls\DataFormContentLoadEventArgs.cs" />
+    <Compile Include="Controls\DataFormEditEndedEventArgs.cs" />
+    <Compile Include="Controls\DataFormEditEndingEventArgs.cs" />
+    <Compile Include="Controls\DataFormToStringConverter.cs" />
+    <Compile Include="Controls\DataFormValueConverter.cs" />
+    <Compile Include="Controls\PathOrderPair.cs" />
+    <Compile Include="Controls\ValidationUtil.cs" />
+    <Compile Include="Controls\WeakEventListener.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Common\CommonResources.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

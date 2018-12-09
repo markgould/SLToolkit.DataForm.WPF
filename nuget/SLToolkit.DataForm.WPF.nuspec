@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>SLToolkit.DataForm.WPF</id>
+    <version>1.0.0</version>
+    <authors>Mark Gould</authors>
+    <description>A port of the Silverlight Toolkit DataForm library</description>
+    <releaseNotes>
+    </releaseNotes>
+    <tags>WPF DataForm Toolkit</tags>
+  </metadata>
+  <files>
+    <file src="..\src\SLToolkit.DataForm.WPF\bin\$configuration$\netstandard2.0\SLToolkit.DataForm.WPF.*" target="lib\net472" />
+  </files>
+</package>

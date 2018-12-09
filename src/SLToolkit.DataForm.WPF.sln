@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLToolkit.DataForm.WPF", "SLToolkit.DataForm.WPF\SLToolkit.DataForm.WPF.csproj", "{B1F0F8DD-E13C-40B9-8CFC-75439A9BC240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFormDemo", "DataFormDemo\DataFormDemo.csproj", "{3887BA93-DF9E-4D42-A2A1-BFF18A9E1AA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1F0F8DD-E13C-40B9-8CFC-75439A9BC240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F0F8DD-E13C-40B9-8CFC-75439A9BC240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F0F8DD-E13C-40B9-8CFC-75439A9BC240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F0F8DD-E13C-40B9-8CFC-75439A9BC240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3887BA93-DF9E-4D42-A2A1-BFF18A9E1AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3887BA93-DF9E-4D42-A2A1-BFF18A9E1AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3887BA93-DF9E-4D42-A2A1-BFF18A9E1AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3887BA93-DF9E-4D42-A2A1-BFF18A9E1AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10CF6382-59FB-4DD5-87B1-99E5CBE43871}
+	EndGlobalSection
+EndGlobal

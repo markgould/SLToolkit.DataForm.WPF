@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <AssemblyVersion>$(GitVersion_AssemblySemVer)</AssemblyVersion>
+    <AssemblyFileVersion>$(GitVersion_AssemblySemFileVer)</AssemblyFileVersion>
+    <InformationalVersion>$(GitVersion_InformationalVersion)</InformationalVersion>
+  </PropertyGroup>
+</Project>
