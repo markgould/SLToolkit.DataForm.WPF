@@ -10,6 +10,6 @@
     <tags>WPF DataForm Toolkit</tags>
   </metadata>
   <files>
-    <file src="..\src\SLToolkit.DataForm.WPF\bin\$configuration$\netstandard2.0\SLToolkit.DataForm.WPF.*" target="lib\net472" />
+    <file src="..\src\SLToolkit.DataForm.WPF\bin\$configuration$\SLToolkit.DataForm.WPF.*" target="lib\net472" />
   </files>
 </package>
